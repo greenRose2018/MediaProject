@@ -48,10 +48,10 @@ class MediaController: UIViewController {
     
     @IBAction func musicPlay() -> Void
     {
-        //if (soundBtn = true)
-        //{
-            
-        //}
+//        if (soundBtn = true)
+//        {
+//            
+//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

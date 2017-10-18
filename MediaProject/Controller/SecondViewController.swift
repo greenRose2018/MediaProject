@@ -8,10 +8,42 @@
 
 import UIKit
 
+
 class SecondViewController: UIViewController {
-    @IBOutlet weak var Image: UIImageView!
-    @IBOutlet weak var HomeBtn: UIButton!
-    @IBOutlet weak var Slider: UISlider!
+    
+    private var counterImage = 0
+    
+    @IBOutlet weak var imageScreen: UIImageView!
+    @IBOutlet weak var changeImage: UIButton!
+    @IBOutlet weak var homeBtn: UIButton!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var volumeSlider: UISlider!
+    
+    @IBAction func changePicture() -> Void
+    {
+        switchImage()
+    }
+    private func switchImage() -> Void
+    {
+        if (counterImage > 2)
+        {
+            counterImage = 0
+        }
+        if (counterImage == 0)
+        {
+            imageScreen.image = UIImage(named: "logo")
+        }
+        else if (counterImage == 1)
+        {
+            imageScreen.image = UIImage(named: "doberman")
+        }
+        else
+        {
+            imageScreen.image = UIImage(named: "meme bug")
+        }
+        counterImage += 1
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
