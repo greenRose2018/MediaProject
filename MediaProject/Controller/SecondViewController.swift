@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 class SecondViewController: UIViewController {
     
-    private var counterImage = 0
+    private var soundPlayer : AVAudioPlayer?
+    private var counterImage : Int = 0
     
     @IBOutlet weak var imageScreen: UIImageView!
     @IBOutlet weak var changeImage: UIButton!
