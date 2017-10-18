@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MediaController: UIViewController {
-   // private var soundPlayer : AVAudioPlayer?
+    private var soundPlayer : AVAudioPlayer?
     private var imageCounter : Int = 0
     //private lazy var color : ColorTools
     

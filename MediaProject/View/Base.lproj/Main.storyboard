@@ -126,28 +126,38 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="gKa-qg-4Yh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-vx-UYe">
+                                <rect key="frame" x="138" y="362" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="changePicture" destination="P0T-6B-Rlo" eventType="touchUpInside" id="OfW-aM-zD5"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Tj-Oj-e4k">
                                 <rect key="frame" x="67" y="196" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkK-KR-Aq8">
+                                <rect key="frame" x="150" y="413" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play/Pause"/>
+                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-Dn-K8a">
-                                <rect key="frame" x="128" y="631" width="118" height="30"/>
+                                <rect key="frame" x="128" y="486" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-vx-UYe">
-                                <rect key="frame" x="141" y="362" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change Image"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="XWP-Mn-fnM"/>
                     </view>
                     <connections>
                         <outlet property="HomeBtn" destination="bsm-xP-w10" id="CWg-Gg-8qn"/>
-                        <outlet property="IdkBtn" destination="RwD-vx-UYe" id="et4-x1-NXw"/>
-                        <outlet property="Image" destination="9Tj-Oj-e4k" id="0bl-Jq-4wD"/>
-                        <outlet property="Slider" destination="gp4-Dn-K8a" id="WlK-Xv-jhV"/>
+                        <outlet property="changeImage" destination="RwD-vx-UYe" id="QXv-4b-Bw3"/>
+                        <outlet property="homeBtn" destination="bsm-xP-w10" id="p5c-F9-Zf4"/>
+                        <outlet property="imageScreen" destination="9Tj-Oj-e4k" id="Pwo-a2-aFf"/>
+                        <outlet property="playBtn" destination="CkK-KR-Aq8" id="DYW-Pp-2xx"/>
+                        <outlet property="volumeSlider" destination="gp4-Dn-K8a" id="xRh-ct-UUH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvJ-Fe-9u2" userLabel="First Responder" sceneMemberID="firstResponder"/>
