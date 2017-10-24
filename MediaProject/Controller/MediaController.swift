@@ -52,6 +52,10 @@ class MediaController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     @IBAction func musicPlay() -> Void
     {
         playMusicFile()
@@ -59,14 +63,25 @@ class MediaController: UIViewController {
     
     private func playMusicFile() -> Void
     {
-        if (soundPlayer?.isPlaying)! //not the best code, also not the safest, could crash program
+        if let isPlaying = soundPlayer?.isPlaying //better code and prevents crash
         {
-            soundPlayer?.pause()
+            if (isPlaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+                soundPlayer?.play()
+            }
         }
-        else
-        {
-            soundPlayer?.play()
-        }
+//        if (soundPlayer?.isPlaying)! //not the best code, also not the safest, could crash program
+//        {
+//            soundPlayer?.pause()
+//        }
+//        else
+//        {
+//            soundPlayer?.play()
+//        }
     }
     
     private func loadAudioFile() -> Void
@@ -80,21 +95,22 @@ class MediaController: UIViewController {
                 
                 try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
                 soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
-                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.soundSlider)), userInfo:nil, repeats: true)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo:nil, repeats: true)
             }
             catch
             {
                 print("Audio File Load Error")
             }
         }
-
+    }
+    
+    @objc private func updateSlider() -> Void
+    {
+        soundSlider.value = Float ((soundPlayer?.currentTime)!)
     }
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
 
     /*
