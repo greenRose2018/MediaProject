@@ -49,7 +49,7 @@ class MediaController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadAudioFile()
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
