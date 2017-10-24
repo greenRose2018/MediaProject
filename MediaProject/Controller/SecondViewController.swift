@@ -65,7 +65,7 @@ class SecondViewController: UIViewController {
     {
         if let isPlaying = soundPlayer?.isPlaying
         {
-            if(isplaying)
+            if(isPlaying)
             {
                 soundPlayer?.pause()
             }
