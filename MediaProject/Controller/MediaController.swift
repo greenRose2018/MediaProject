@@ -46,17 +46,27 @@ class MediaController: UIViewController {
         imageCounter += 1
     }
     
-    @IBAction func musicPlay() -> Void
-    {
-//        if (soundBtn = true)
-//        {
-//            
-//        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func musicPlay() -> Void
+    {
+        playMusicFile()
+    }
+    
+    private func playMusicFile() -> Void
+    {
+        if (soundPlayer?.isPlaying)! //not the best code, also not the safest, could crash program
+        {
+            soundPlayer?.pause()
+        }
+        else
+        {
+            soundPlayer?.play()
+        }
     }
     
     
