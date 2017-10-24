@@ -158,6 +158,9 @@
                                 <rect key="frame" x="150" y="413" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play/Pause"/>
+                                <connections>
+                                    <action selector="playAudioFile" destination="P0T-6B-Rlo" eventType="touchUpInside" id="d7k-2e-E9Y"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-Dn-K8a">
                                 <rect key="frame" x="128" y="486" width="118" height="30"/>
@@ -172,7 +175,7 @@
                         <outlet property="changeImage" destination="RwD-vx-UYe" id="QXv-4b-Bw3"/>
                         <outlet property="homeBtn" destination="bsm-xP-w10" id="p5c-F9-Zf4"/>
                         <outlet property="imageScreen" destination="9Tj-Oj-e4k" id="Pwo-a2-aFf"/>
-                        <outlet property="playBtn" destination="CkK-KR-Aq8" id="DYW-Pp-2xx"/>
+                        <outlet property="playBtn" destination="CkK-KR-Aq8" id="YKE-4n-Nct"/>
                         <outlet property="volumeSlider" destination="gp4-Dn-K8a" id="xRh-ct-UUH"/>
                     </connections>
                 </viewController>
@@ -182,6 +185,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R6G-m5-4dz"/>
+        <segue reference="gKa-qg-4Yh"/>
     </inferredMetricsTieBreakers>
 </document>

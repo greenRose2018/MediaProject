@@ -57,7 +57,25 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func playAudioFile() -> Void
+    {
+        playMusicFile()
+    }
+    private func playMusicFile() -> Void
+    {
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if(isplaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+                
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
