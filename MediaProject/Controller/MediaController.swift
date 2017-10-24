@@ -69,6 +69,26 @@ class MediaController: UIViewController {
         }
     }
     
+    private func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "Glorious")
+        {
+            do
+            {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.soundSlider)), userInfo:nil, repeats: true)
+            }
+            catch
+            {
+                print("Audio File Load Error")
+            }
+        }
+
+    }
     
 
     override func didReceiveMemoryWarning() {
