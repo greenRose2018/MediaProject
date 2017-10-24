@@ -109,7 +109,12 @@ class MediaController: UIViewController {
         soundSlider.value = Float ((soundPlayer?.currentTime)!)
     }
     
-
+    @IBAction func slidingSound(_ sender: UISlider)
+    {
+        let seekTime = Double (soundSlider.value)
+        soundPlayer?.currentTime = seekTime
+    }
+    
 
     
 
